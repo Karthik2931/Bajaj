@@ -15,15 +15,15 @@ app.get('/bfhl', (req, res) => {
 
 // POST method: Processes input data
 app.post('/bfhl', (req, res) => {
-    const { data } = req.body;
-
+    let { data } = req.body;
+    
     if (!data || !Array.isArray(data)) {
-        return res.status(400).json({ is_success: false, message: "Invalid input format" });
+        data = data.data;
     }
 
-    const user_id = "Nadella Jnana Karthik Kumar _ 29082005"; // Replace with actual user_id
-    const email = "22BCS16229@cuchd.in";
-    const roll_number = "22BCS16229";
+    const user_id = "john_doe_17091999";
+    const email = "john@xyz.com";
+    const roll_number = "ABCD123";
 
     const numbers = data.filter(item => !isNaN(item));
     const alphabets = data.filter(item => /^[A-Za-z]$/.test(item));
@@ -44,3 +44,4 @@ app.post('/bfhl', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
+
