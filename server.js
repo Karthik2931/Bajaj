@@ -21,9 +21,9 @@ app.post('/bfhl', (req, res) => {
         data = data.data;
     }
 
-    const user_id = "john_doe_17091999";
-    const email = "john@xyz.com";
-    const roll_number = "ABCD123";
+    const user_id = "Nadella Jnana Karthik Kumar";
+    const email = "22BCS16229@cuchd.in";
+    const roll_number = "22BCS16229";
 
     const numbers = data.filter(item => !isNaN(item));
     const alphabets = data.filter(item => /^[A-Za-z]$/.test(item));
